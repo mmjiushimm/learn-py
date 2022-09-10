@@ -14,3 +14,16 @@ bbb
 ccc''')
 print(r'''\\\n
 \\''')
+
+# boolean
+print(1 > 2)
+print(1 < 2)
+print(True and False)
+print(True or False)
+print(not True)
+
+# divide
+print(10 / 3)
+print(9 / 3)
+print(10 // 3)
+print(10 % 3)
