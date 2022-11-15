@@ -2,7 +2,7 @@
 
 class Person(object):
     __name__ = 'Person Class'
-    __name = ''
+    #__name = ''
     _date = '20221115'
     def __init__(self, name, age):
         self.__name = name
@@ -10,6 +10,9 @@ class Person(object):
         
     def get_name(self):
         return self.__name
+        
+    def set_name(self, name):
+        self.__name = name
         
     def get_age(self):
         return self.__age
