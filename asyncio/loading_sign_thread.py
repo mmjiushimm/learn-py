@@ -23,7 +23,7 @@ def work():
     time.sleep(2)
     return 'loading done'
 
-def main():
+def spinner_thread():
     signal = Signal()
     t = threading.Thread(target=spinner, args=(signal,))
     t.start()
@@ -31,7 +31,11 @@ def main():
     # 修改signal对象的属性值，控制子线程循环体的结束
     signal.flag = False
     t.join()
+    return result
+
+def main():
+    result = spinner_thread()
     print(result)
-    
+
 if __name__ == '__main__':
     main()
